@@ -468,7 +468,7 @@
 
     <!-- модальное окно -->
 
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-button" type="button" data-modal-close>
                 <svg class="icon-modal" width="11" height="11">
@@ -502,15 +502,25 @@
                     </svg>
                 </div>
 
-
                 <label for="modal-comment" class="modal-label">Комментарий</label>
                 <textarea name="modal-comment" id="modal-comment" placeholder="Введите текст"
                     class="modal-comment"></textarea>
+
+                <div class="box-checkbox">
+                    <input type="checkbox" class="modal-checkbox" name="modal-checkbox" id="modal-checkbox">
+                    <label for="modal-checkbox" class="checkbox-label">
+                        Соглашаюсь с рассылкой и принимаю <a class="chekbox-link" href="">Условия договора</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="modal-button-submit">Отправить</button>
+                
+                
             </form>
         </div>
     </div>
 
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
