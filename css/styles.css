@@ -888,6 +888,7 @@ footer {
 
 .box-modal {
   position: relative;
+  margin-bottom: 10px;
 }
 
 .icon-modal-text {
@@ -902,7 +903,7 @@ footer {
   display: block;
   width: 448px;
   height: 40px;
-  margin-bottom: 10px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
@@ -917,7 +918,7 @@ footer {
   resize: none;
   padding-top: 12px;
   padding-left: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   transition: border var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
@@ -946,13 +947,14 @@ footer {
 }
 
 .modal-checkbox {
-  width: 1px;
+  /* width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
   border: 0;
-  clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0); */
+  visibility: hidden;
 }
 
 .checkbox-label {
@@ -963,7 +965,7 @@ footer {
 .modal-checkbox:checked + .checkbox-label::before {
   background: var(--accent-color);
   background-image: url(../images/modal/chek-modal.svg);
-  border: none;
+  border-color: var(--accent-color);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -977,10 +979,14 @@ footer {
   border: 2px solid #212121;
   border-radius: 2px;
   margin-right: 8px;
+  transition: border-color var(--main-transition-duration)
+      var(--main-cubic-bezier),
+    background var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .chekbox-link {
   margin-left: 3px;
+  color: var(--accent-color);
 }
 
 .modal-button-submit {
